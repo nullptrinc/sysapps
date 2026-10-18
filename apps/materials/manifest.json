@@ -1,0 +1,10 @@
+{
+  "format": 1,
+  "id": "org.starry.materials",
+  "version": "0.2",
+  "build": 2,
+  "api": 1,
+  "name": { "en": "Materials", "ru": "Материалы" },
+  "color": "#FFB340",
+  "entry": { "type": "qml", "path": "qml/main.qml" }
+}

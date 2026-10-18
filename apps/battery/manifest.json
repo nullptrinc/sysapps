@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "id": "org.starry.battery",
+  "version": "0.1",
+  "build": 1,
+  "api": 1,
+  "name": { "en": "Battery", "ru": "Батарея" },
+  "color": "#8DE0B4",
+  "entry": { "type": "qml", "path": "qml/main.qml" },
+  "permissions": ["power"]
+}
