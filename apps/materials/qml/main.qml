@@ -6,7 +6,7 @@ import Stardust 1.0
 Window {
     id: app
     title: "Батарея"
-    appId: "org.starry.materials"
+    appId: "org.lunarmobile.materials"
     background: "#17191d"
     backgroundEnd: "#08090a"
     material: "brushed"
@@ -16,7 +16,6 @@ Window {
     property real tilt: 200
     property bool saver: false
     property bool optimize: true
-    property int period: 1
 
     // Sweeps the light over the chrome until the tilt sensor drives it.
     property Timer sweep: Timer {
@@ -268,16 +267,18 @@ Window {
             Swatch { color: "#f2f2f2" }
         }
 
-        // Chrome segments; the chosen one sinks and lights up.
+        // Chrome segments pick the home screen icons for the whole system;
+        // the chosen one sinks and lights up.
         Container {
             orientation: "horizontal"
             horizontalAlignment: "center"
             radius: 9
             borderWidth: 1
             borderColor: "#000000"
-            Segment { text: "День"; selected: app.period === 0; onClicked: app.period = 0 }
-            Segment { text: "Неделя"; selected: app.period === 1; onClicked: app.period = 1 }
-            Segment { text: "Месяц"; selected: app.period === 2; onClicked: app.period = 2 }
+            Segment { text: "Обычные"; preferredWidth: 82; selected: Theme.iconStyle === "default"; onClicked: Theme.setIconStyle("default") }
+            Segment { text: "Тёмные"; preferredWidth: 82; selected: Theme.iconStyle === "dark"; onClicked: Theme.setIconStyle("dark") }
+            Segment { text: "Тон"; preferredWidth: 82; selected: Theme.iconStyle === "tinted"; onClicked: Theme.setIconStyle("tinted") }
+            Segment { text: "Стекло"; preferredWidth: 82; selected: Theme.iconStyle === "clear"; onClicked: Theme.setIconStyle("clear") }
         }
 
         // A chrome button and a backlit glass button.

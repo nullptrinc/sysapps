@@ -5,7 +5,7 @@ import Stardust 1.0
 Window {
     id: app
     title: "Телефон"
-    appId: "org.starry.phone"
+    appId: "org.lunarmobile.phone"
     layout: "dock"
     background: "#0b0d17"
 

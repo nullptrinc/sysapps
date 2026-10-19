@@ -6,7 +6,7 @@ import Constellation 1.0
 Window {
     id: app
     title: "Батарея"
-    appId: "org.starry.battery"
+    appId: "org.lunarmobile.battery"
     background: "#0b0d17"
     padding: 24
     spacing: 14

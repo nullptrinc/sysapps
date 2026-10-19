@@ -6,17 +6,19 @@ shipped as `.apf` packages for [cosmic](https://github.com/nullptrinc/cosmic).
 
 | App | Id | |
 |---|---|---|
-| Батарея | `org.starry.battery` | the battery from Constellation, power saver switch |
-| Материалы | `org.starry.materials` | the dark material set and the system accent |
-| Телефон | `org.starry.phone` | a dialer, no telephony yet |
+| Батарея | `org.lunarmobile.battery` | the battery from Constellation, power saver switch |
+| Материалы | `org.lunarmobile.materials` | the dark material set and the system accent |
+| Телефон | `org.lunarmobile.phone` | a dialer, no telephony yet |
 
 Each app is a directory under `apps/` with a `manifest.json` (see cosmic's
-`SPEC.md`) and its QML. Bump `build` with every change that ships.
+`SPEC.md`), its QML and optionally `icons/`: 256×256 8-bit PNGs per
+appearance (`default`, `dark`, `tinted`, `clear`), e.g. exported from Icon
+Composer and scaled down. Bump `build` with every change that ships.
 
 ```sh
 tools/build-apf.sh dev.key out/          # pack and sign every app
-apf-sign-gpg --key <subkey> out/org.starry.battery.apf   # add the platform signature
-cosmic install out/org.starry.battery.apf
+apf-sign-gpg --key <subkey> out/org.lunarmobile.battery.apf   # add the platform signature
+cosmic install out/org.lunarmobile.battery.apf
 ```
 
 Run an app without packing it: `stardust apps/battery/qml/main.qml`.

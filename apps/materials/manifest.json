@@ -1,8 +1,8 @@
 {
   "format": 1,
-  "id": "org.starry.materials",
-  "version": "0.2",
-  "build": 2,
+  "id": "org.lunarmobile.materials",
+  "version": "0.3",
+  "build": 3,
   "api": 1,
   "name": { "en": "Materials", "ru": "Материалы" },
   "color": "#FFB340",

@@ -1,11 +1,17 @@
 {
   "format": 1,
-  "id": "org.starry.phone",
+  "id": "org.lunarmobile.phone",
   "version": "0.1",
   "build": 1,
   "api": 1,
   "name": { "en": "Phone", "ru": "Телефон" },
   "color": "#27AE60",
+  "icon": {
+    "default": "icons/default.png",
+    "dark": "icons/dark.png",
+    "tinted": "icons/tinted.png",
+    "clear": "icons/clear.png"
+  },
   "entry": { "type": "qml", "path": "qml/main.qml" },
   "permissions": ["telephony"]
 }
